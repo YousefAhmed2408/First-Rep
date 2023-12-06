@@ -29,14 +29,22 @@ namespace practise
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            account a = db.accounts.First(x=>x.Phonenumber==phone.Text);
-            if(phone.Text==conf.Text)
+            account a = db.accounts.First(x => x.Phonenumber == phone.Text);
+            if (fpass.Text == conf.Text)
             {
-               a.pass=phone.Text;
+                a.pass = fpass.Text;
                 db.accounts.AddOrUpdate(a);
                 db.SaveChanges();
                 MessageBox.Show("Update successfuly");
+                Login ll = new Login();
+                this.NavigationService.Navigate(ll);
             }
+            else
+            {
+                MessageBox.Show("Update Failed");
+            }
+
         }
     }
 }
+

@@ -9,6 +9,16 @@
       Title="Search">
 
     <Grid Background="#FFFBF5F5">
-        
+        <Label Content="City" HorizontalAlignment="Left" Margin="176,43,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="city_txt" HorizontalAlignment="Left" Margin="275,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="31"/>
+        <Button x:Name="search_btn" Content="Search" HorizontalAlignment="Left" Margin="484,39,0,0" VerticalAlignment="Top" Height="33" Width="75" Click="search_btn_Click"/>
+        <DataGrid x:Name="dg" Margin="0,318,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="User name" Binding="{Binding unamee}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Phone number" Binding="{Binding Phonenumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Gender" Binding="{Binding gender}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Page>

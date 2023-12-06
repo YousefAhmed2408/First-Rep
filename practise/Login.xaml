@@ -8,8 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Login">
 
-    <Grid Background="#FFF7F2F2">
-        <Label Content="Login Form" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="143" Background="#FFB4AEAE" FontSize="16"/>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Screenshot 2023-12-04 133145.png" />
+            
+        </Grid.Background>
+        <Label Style="{StaticResource label1}"  Content="Login Form" HorizontalAlignment="Left" Margin="300,10,0,0" VerticalAlignment="Top" Width="143" />
         <Label Content="Username:" HorizontalAlignment="Left" Margin="235,83,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>
         <TextBox x:Name="username_txt" HorizontalAlignment="Left" Margin="326,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="16" Background="#FFFDFDFD" Foreground="#FF908989"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="230,176,0,0" VerticalAlignment="Top" Width="91" FontSize="16"/>

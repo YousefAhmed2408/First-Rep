@@ -12,7 +12,7 @@
         <Label Content="User"  Style="{StaticResource label1}" Margin="82,25,633,340"/>
         <Image HorizontalAlignment="Left" Height="67" Margin="211,20,0,0" VerticalAlignment="Top" Width="65" Source="/Screenshot 2023-12-04 133145.png"/>
         <Button Content="log out" HorizontalAlignment="Left" Margin="649,31,0,0" VerticalAlignment="Top" FontSize="22" Height="33" Width="120" Click="Button_Click_1"/>
-        <DataGrid Name="dg" HorizontalAlignment="Left" Height="136" Margin="10,255,0,0" VerticalAlignment="Top" Width="759" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <DataGrid Name="dg" HorizontalAlignment="Left" Height="136" Margin="10,255,0,0" VerticalAlignment="Top" Width="759" />
         <Label x:Name="label1" HorizontalAlignment="Left" Margin="400,46,0,0" VerticalAlignment="Top" Height="31" Width="105"/>
     </Grid>
 </Page>

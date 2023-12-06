@@ -33,7 +33,8 @@ namespace practise
 
         private void search_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            Search ss=new Search();
+            this.NavigationService.Navigate(ss);
         }
     }
 }

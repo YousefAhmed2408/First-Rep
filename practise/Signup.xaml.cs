@@ -29,15 +29,41 @@ namespace practise
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Regex r = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,18}$");
+            bool IsValid(String Pass)
+            {
+                bool upper, lower, num, sympole;
+                upper = lower = num = sympole = false;
+                string spatiel = "!@#$%^&*()";
+                foreach (char c in Pass)
+                {
+                    if (c >= 'A' && c <= 'Z')
+                    {
+                        upper = true;
+                    }
+                    else if (c >= 'a' && c <= 'z')
+                    {
+                        lower = true;
+                    }
+                    else if (c >= '0' && c <= '9')
+                    {
+                        num = true;
+                    }
+                    else if (spatiel.Contains(c))
+                    {
+                        sympole = true;
+                    }
+                }
+                return upper && lower && num && sympole;
+            }
             int age = int.Parse(Age_txt.Text);
             if(age > 18 && age < 60)
             {
+
                 if (Phonenum_txt.Text.Length == 11)
                 {
-                    if (r.IsMatch(password.Password))
+                    if (IsValid (password.Password))
                     {
-                        account kok = new account();
+                        account kok = new account();    
                         kok.unamee = username_txt.Text;
                         kok.pass = password.Password;
                         kok.Phonenumber = Phonenum_txt.Text;
@@ -79,7 +105,7 @@ namespace practise
                         this.NavigationService.Navigate(loginp);
 
                     }
-                    else if (!r.IsMatch(password.Password))
+                    else if (!IsValid(password.Password))
                     {
                         MessageBox.Show("You sould [a-z],[A-Z],[1,9]");
                     }

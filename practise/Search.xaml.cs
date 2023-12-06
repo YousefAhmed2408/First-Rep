@@ -15,18 +15,20 @@ using System.Windows.Shapes;
 
 namespace practise
 {
-    /// <summary>
-    /// Interaction logic for Search.xaml
-    /// </summary>
     public partial class Search : Page
     {
+        masterEntities db = new masterEntities();
         public Search()
         {
             InitializeComponent();
+           
         }
 
         private void search_btn_Click(object sender, RoutedEventArgs e)
         {
+
+            dg.ItemsSource=db.accounts.Where(x=>x.City.Contains(city_txt.Text)).ToList();
+       
 
         }
     }
