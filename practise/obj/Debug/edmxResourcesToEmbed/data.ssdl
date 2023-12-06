@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="accounts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unamee" Type="nvarchar" MaxLength="100" />
+    <Property Name="pass" Type="nvarchar" MaxLength="100" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="varchar" MaxLength="100" />
+    <Property Name="Phonenumber" Type="varchar" MaxLength="11" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Admin_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="A_Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="A_Pass" Type="nvarchar" MaxLength="200" />
+    <Property Name="A_Age" Type="int" />
+    <Property Name="A_Gender" Type="nvarchar" MaxLength="200" />
+    <Property Name="A_PhoneNum" Type="nvarchar" MaxLength="200" />
+    <Property Name="A_City" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="accounts" EntityType="Self.accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin_" EntityType="Self.Admin_" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

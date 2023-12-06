@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="unamee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="gender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Phonenumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Admin_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="A_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="A_Pass" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="A_Age" Type="Int32" />
+    <Property Name="A_Gender" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="A_PhoneNum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="A_City" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="Admin_" EntityType="Self.Admin_" />
+  </EntityContainer>
+</Schema>

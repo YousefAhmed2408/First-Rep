@@ -1,0 +1,17 @@
+﻿<Page x:Class="practise.Admin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:practise"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin">
+
+    <Grid Background="White">
+        <Button x:Name="delete_btn" Content="Delete" HorizontalAlignment="Left" Margin="511,285,0,0" VerticalAlignment="Top" Height="67" Width="178" Background="#FF0E4DC4" Foreground="#FFFDF7F7" Click="delete_btn_Click"/>
+        <Button x:Name="search_btn" Content="Search" HorizontalAlignment="Left" Margin="124,285,0,0" VerticalAlignment="Top" Height="67" Width="178" Background="#FF0E4DC4" Foreground="#FFFDF7F7" Click="search_btn_Click"/>
+        <Label Content="Welcome" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF111EE9"/>
+
+    </Grid>
+</Page>
